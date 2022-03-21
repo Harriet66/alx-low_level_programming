@@ -3,7 +3,7 @@
 /**
  * _strlen - returns length of a string by pointer
  * @s: input char pointer
- * @y: length of string
+ *
  * Return: length of a string
  */
 
