@@ -2,22 +2,30 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns pointer to new space in, having copy of the string param.
- * @str: string as parameter
- * Return: ptr
+ * _strdup - Returns pointer to newly space in mem having copy of string param.
+ * @str:string
+ * Return:char
  */
 char *_strdup(char *str)
 {
-	char *ptr;
-	unsigned int x, len;
+	char *s;
+	int i, l = 0;
 
-	if (!str)
+	if (str == NULL)
 		return (NULL);
-	for (len = 0; str[len]; len++)
-		ptr = (char *)malloc(len * sizeof(char));
-	if (!ptr)
+
+	for (i = 0; str[i]; i++)
+		l++;
+
+	s = malloc(sizeof(char) * (l + 1));
+
+	if (s == NULL)
 		return (NULL);
-	for (x = 0; x <= len; x++)
-		ptr[x] = str[x];
-	return (ptr);
+
+	for (i = 0; str[i]; i++)
+		s[i] = str[i];
+
+	s[l] = '\0';
+
+	return (s);
 }
