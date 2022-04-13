@@ -2,13 +2,17 @@
 #include <stdio.h>
 
 /**
- * print_name - print name
- * @name : string
- * @f: function
- * Return: void
+ * print_name - function to print a name in a desired case
+ *
+ * @name: name to be printed
+ * @f: function to print in desired case
+ *
+ * Return: nothing
  */
-void print_name(char *name, void (*f)(char *))
+void print_name(char *name, void(*f)(char *))
 {
-	if (name != NULL && f != NULL)
-	f(name);
+		if (f != 0 && name != 0)
+		{
+			f(name);
+		}
 }
