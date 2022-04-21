@@ -42,8 +42,8 @@ void p_float(va_list list) { printf("%f", va_arg(list, double)); }
  * @format:arg
  * Return: void
  */
-
 void print_all(const char *const format, ...)
+
 {
 	unsigned int i, j;
 
