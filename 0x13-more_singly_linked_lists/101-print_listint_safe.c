@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint_safe - prints a linked list, safely
@@ -24,6 +25,5 @@ size_t print_listint_safe(const listint_t *head)
 			break;
 		}
 	}
-
 	return (num);
 }
